@@ -11,19 +11,29 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.myapplicationrestaurant.ui.theme.SmartHealthMonitorTheme
+import com.example.myapplicationrestaurant.ui.screens.DashboardScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             SmartHealthMonitorTheme {
+                var showLogin by remember { mutableStateOf(true) }
+
                 Surface(modifier = Modifier.fillMaxSize()) {
-                    LoginScreen(
-                        onLoginSuccess = {
-                            // TODO sesión 5: navegar al Dashboard
-                            Log.d("SmartHealth", "Login exitoso")
-                        }
-                    )
+                    if (showLogin) {
+                        LoginScreen(
+                            onLoginSuccess = {
+                                showLogin = false
+                                Log.d("SmartHealth", "Login exitoso")
+                            }
+                        )
+                    } else {
+                        DashboardScreen(
+                            onHistorialClick = { /* Navegar a historial */ },
+                            onAlertClick = { /* Enviar alerta */ }
+                        )
+                    }
                 }
             }
         }
