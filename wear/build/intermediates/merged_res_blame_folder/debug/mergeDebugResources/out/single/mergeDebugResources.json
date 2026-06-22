@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "com.example.myapplicationrestaurant.wear-debug-81:/xml_watch_face.xml.flat",
+        "source": "com.example.myapplicationrestaurant.wear-main-83:/xml/watch_face.xml"
+    }
+]

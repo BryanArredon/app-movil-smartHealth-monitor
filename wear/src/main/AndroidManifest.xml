@@ -22,6 +22,22 @@
 
         <service android:name=".data.HealthDataService" android:exported="false" />
 
+        <service
+            android:name=".watchface.SmartHealthWatchFaceService"
+            android:exported="true"
+            android:label="SmartHealth Watch Face"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/watch_face" />
+            <meta-data
+                android:name="com.google.android.wearable.watchface.preview"
+                android:resource="@android:drawable/btn_star" />
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

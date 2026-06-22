@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myapplicationrestaurant.wear-mergeDebugResources-68:/values-sw210dp-v13/values-sw210dp-v13.xml",
+            "outputFile": "com.example.myapplicationrestaurant.wear-mergeDebugResources-79:/values-sw210dp-v13/values-sw210dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/juanfranciscomanzanogarcia/.gradle/caches/9.4.1/transforms/1c7e2cff0ffe2d457c8d40b5002b5808/transformed/wear-1.3.0/res/values-sw210dp-v13/values-sw210dp-v13.xml",
+                    "source": "/Users/juanfranciscomanzanogarcia/.gradle/caches/9.4.1/transforms/3aa6c3303cb6f033691b19fd91a1ced2/transformed/wear-1.3.0/res/values-sw210dp-v13/values-sw210dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

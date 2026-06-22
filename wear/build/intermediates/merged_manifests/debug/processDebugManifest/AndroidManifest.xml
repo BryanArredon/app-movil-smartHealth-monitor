@@ -14,6 +14,19 @@
 
     <queries>
         <package android:name="com.google.android.wearable.healthservices" />
+
+        <intent>
+
+            <!-- Needed to have visibility on complication data sources installed on the device. -->
+            <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST" />
+        </intent>
+        <intent>
+
+            <!-- Needed to have visibility on launcher items to handle app shortcuts in complications. -->
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
     </queries>
 
     <permission
@@ -44,6 +57,24 @@
             android:name="com.example.myapplicationrestaurant.wear.data.HealthDataService"
             android:exported="false" />
         <service
+            android:name="com.example.myapplicationrestaurant.wear.watchface.SmartHealthWatchFaceService"
+            android:exported="true"
+            android:label="SmartHealth Watch Face"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/watch_face" />
+            <meta-data
+                android:name="com.google.android.wearable.watchface.preview"
+                android:resource="@android:drawable/btn_star" />
+
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+        </service>
+        <service
             android:name="androidx.health.services.client.VersionApiService"
             android:exported="true"
             android:permission="com.google.android.wearable.healthservices.permission.PASSIVE_DATA_BINDING" >
@@ -55,6 +86,40 @@
         <uses-library
             android:name="com.google.android.wearable"
             android:required="false" />
+
+        <service
+            android:name="androidx.wear.watchface.control.WatchFaceControlService"
+            android:directBootAware="true"
+            android:enabled="@bool/watch_face_instance_service_enabled"
+            android:exported="true"
+            android:permission="com.google.android.wearable.permission.BIND_WATCH_FACE_CONTROL" >
+            <meta-data
+                android:name="androidx.wear.watchface.api_version"
+                android:value="@integer/watch_face_api_version" />
+            <meta-data
+                android:name="androidx.wear.watchface.xml_version"
+                android:value="@integer/watch_face_xml_version" />
+
+            <intent-filter>
+                <action android:name="com.google.android.wearable.action.WATCH_FACE_CONTROL" />
+            </intent-filter>
+        </service>
+        <!--
+      Used to configure complications. Applications can remove this using:
+      <activity
+	  android:name="androidx.wear.watchface.ComplicationHelperActivity"
+	  tools:node="remove" />
+      in their manifest if they do not support complications and want to allow
+      R8 to remove the code associated with this activity. If the activity is
+      remove while it is needed, this may lead to a runtime exception of type
+      android.content.ActivityNotFoundException.
+        -->
+        <activity
+            android:name="androidx.wear.watchface.ComplicationHelperActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
         <uses-library
             android:name="wear-sdk"
             android:required="false" />

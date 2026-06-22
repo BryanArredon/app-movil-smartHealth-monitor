@@ -16,6 +16,7 @@ import com.google.android.horologist.compose.layout.scrollAway
 @Composable
 fun WearDashboardScreen(
     onAlertClick: () -> Unit = {},
+    onHistorialClick: () -> Unit = {},
     viewModel: WearDashboardViewModel = viewModel()
 ) {
     val fc by viewModel.fc.collectAsState()
@@ -41,7 +42,17 @@ fun WearDashboardScreen(
                     modifier = Modifier.fillMaxWidth()
                 )
             }
-            // Item 2: Chip de Alerta
+            
+            // Item 2: Historial
+            item {
+                Chip(
+                    label = { Text("📋 Historial") },
+                    onClick = onHistorialClick,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+            
+            // Item 3: Chip de Alerta
             item {
                 Chip(
                     label = { Text("⚠ Alerta") },

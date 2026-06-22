@@ -1,16 +1,33 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myapplicationrestaurant.wear-mergeDebugResources-68:/values-v30/values-v30.xml",
+            "outputFile": "com.example.myapplicationrestaurant.wear-mergeDebugResources-79:/values-v30/values-v30.xml",
             "map": [
                 {
-                    "source": "/Users/juanfranciscomanzanogarcia/.gradle/caches/9.4.1/transforms/ab1352d5b87a589c5e44d24717bf1420/transformed/material3-release/res/values-v30/values-v30.xml",
+                    "source": "/Users/juanfranciscomanzanogarcia/.gradle/caches/9.4.1/transforms/00e404fe30f652e5454f82fb5044ef9f/transformed/watchface-1.2.1/res/values-v30/values-v30.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "64",
+                        "endOffsets": "115"
+                    }
+                },
+                {
+                    "source": "/Users/juanfranciscomanzanogarcia/.gradle/caches/9.4.1/transforms/009e0c6bc1c87c484f3346d2bd92b069/transformed/material3-release/res/values-v30/values-v30.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
                         "endColumns": "72",
                         "endOffsets": "123"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "120",
+                        "endColumns": "72",
+                        "endOffsets": "188"
                     }
                 }
             ]

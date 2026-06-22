@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myapplicationrestaurant.wear-mergeDebugResources-68:/values-fil/values-fil.xml",
+            "outputFile": "com.example.myapplicationrestaurant.wear-mergeDebugResources-79:/values-fil/values-fil.xml",
             "map": [
                 {
-                    "source": "/Users/juanfranciscomanzanogarcia/.gradle/caches/9.4.1/transforms/029d0da7d67ee076fcff70ed74abb39a/transformed/horologist-compose-material-0.6.17/res/values-fil/values-fil.xml",
+                    "source": "/Users/juanfranciscomanzanogarcia/.gradle/caches/9.4.1/transforms/dda4db26698a5c9e0720ccfb7b155313/transformed/horologist-compose-material-0.6.17/res/values-fil/values-fil.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
