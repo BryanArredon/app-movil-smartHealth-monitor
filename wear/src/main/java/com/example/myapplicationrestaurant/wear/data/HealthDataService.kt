@@ -5,12 +5,11 @@ import android.content.Intent
 import android.os.IBinder
 import android.util.Log
 import androidx.health.services.client.HealthServices
+import androidx.health.services.client.MeasureCallback
+import androidx.health.services.client.data.Availability
+import androidx.health.services.client.data.DataPointContainer
 import androidx.health.services.client.data.DataType
-import androidx.health.services.client.data.DataTypeAvailability
 import androidx.health.services.client.data.DeltaDataType
-import androidx.health.services.client.data.HeartRateAccuracy
-import androidx.health.services.client.data.MeasureCallback
-import androidx.health.services.client.data.MeasureDeltaSample
 import com.google.android.gms.wearable.Wearable
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -26,12 +25,13 @@ class HealthDataService : Service() {
     private val messageClient by lazy { Wearable.getMessageClient(this) }
 
     private val callback = object : MeasureCallback {
-        override fun onAvailabilityChanged(dataType: DeltaDataType<*, *>, availability: DataTypeAvailability) {
+        override fun onAvailabilityChanged(dataType: DeltaDataType<*, *>, availability: Availability) {
             Log.d("HealthService", "Availability changed: $availability")
         }
 
-        override fun onDataReceived(data: List<MeasureDeltaSample<Int, HeartRateAccuracy>>) {
-            data.forEach { sample ->
+        override fun onDataReceived(data: DataPointContainer) {
+            val samples = data.getData(DataType.HEART_RATE_BPM)
+            samples.forEach { sample ->
                 val bpm = sample.value
                 Log.d("HealthService", "Heart rate received: $bpm")
                 sendToPhone("/smarthealthmonitor/fc", bpm.toString())
@@ -62,7 +62,7 @@ class HealthDataService : Service() {
     override fun onDestroy() {
         super.onDestroy()
         scope.launch {
-            measureClient.unregisterMeasureCallback(DataType.HEART_RATE_BPM, callback)
+            measureClient.unregisterMeasureCallbackAsync(DataType.HEART_RATE_BPM, callback)
             job.cancel()
         }
     }

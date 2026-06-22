@@ -29,7 +29,6 @@
         android:extractNativeLibs="false"
         android:label="SH Wear"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@android:style/Theme.DeviceDefault" >
         <activity
             android:name="com.example.myapplicationrestaurant.wear.MainActivity"
@@ -44,6 +43,14 @@
         <service
             android:name="com.example.myapplicationrestaurant.wear.data.HealthDataService"
             android:exported="false" />
+        <service
+            android:name="androidx.health.services.client.VersionApiService"
+            android:exported="true"
+            android:permission="com.google.android.wearable.healthservices.permission.PASSIVE_DATA_BINDING" >
+            <intent-filter>
+                <action android:name="hs.versionclient.BIND" />
+            </intent-filter>
+        </service>
 
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
@@ -64,15 +71,6 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
-
-        <service
-            android:name="androidx.health.services.client.VersionApiService"
-            android:exported="true"
-            android:permission="com.google.android.wearable.healthservices.permission.PASSIVE_DATA_BINDING" >
-            <intent-filter>
-                <action android:name="hs.versionclient.BIND" />
-            </intent-filter>
-        </service>
 
         <meta-data
             android:name="com.google.android.gms.version"

@@ -1,6 +1,7 @@
 package com.example.myapplicationrestaurant.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,21 +11,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Warning
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.TopAppBar
-import androidx.compose.runtime.Composable
-import com.example.myapplicationrestaurant.data.db.LecturaFC
-import com.example.myapplicationrestaurant.ui.theme.SmartHealthMonitorTheme
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBarDefaults
-import androidx.compose.material3.Icon
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -35,6 +23,8 @@ import com.example.myapplicationrestaurant.ui.components.TarjetaDato
 import com.example.myapplicationrestaurant.ui.viewmodel.DashboardViewModel
 import com.example.myapplicationrestaurant.data.SmartHealthRepository
 import com.example.myapplicationrestaurant.BuildConfig
+import com.example.myapplicationrestaurant.ui.theme.SmartHealthMonitorTheme
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -48,8 +38,32 @@ fun DashboardScreen(
     val pasos by viewModel.pasos.collectAsState()
     val historial by viewModel.historial.collectAsState()
 
+    // ── Estado del diálogo y Snackbar ──────────────────────
+    var mostrarAlerta by remember { mutableStateOf(false) }
+    val snackbarHost = remember { SnackbarHostState() }
+    val scope = rememberCoroutineScope()
+
+    // ── Diálogo condicional ────────────────────────────────
+    if (mostrarAlerta) {
+        AlertaScreen(
+            fc = fc,
+            onDismiss = { mostrarAlerta = false },
+            onConfirmar = {
+                mostrarAlerta = false
+                scope.launch {
+                    snackbarHost.showSnackbar(
+                        message = "⚠️ Alerta enviada a tus contactos de emergencia",
+                        duration = SnackbarDuration.Long
+                    )
+                }
+            }
+        )
+    }
+
     SmartHealthMonitorTheme {
         Scaffold(
+            // ── Snackbar host en el Scaffold ───────────────
+            snackbarHost = { SnackbarHost(hostState = snackbarHost) },
             topBar = {
                 TopAppBar(
                     title = {
@@ -66,7 +80,7 @@ fun DashboardScreen(
             },
             floatingActionButton = {
                 FloatingActionButton(
-                    onClick = onAlertClick,
+                    onClick = { mostrarAlerta = true },
                     containerColor = MaterialTheme.colorScheme.error
                 ) {
                     Icon(
@@ -114,8 +128,8 @@ fun DashboardScreen(
                             style = MaterialTheme.typography.titleMedium
                         )
                     }
-                        TextButton(onClick = onHistorialClick) {
-                            Text("Ver todo")
+                    TextButton(onClick = onHistorialClick) {
+                        Text("Ver todo")
                     }
                 }
                 // ── Lista del historial ───────────────────

@@ -46,5 +46,6 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.play.services.wearable)
     implementation(libs.androidx.health.services)
+    implementation("com.google.guava:guava:33.0.0-android")
     implementation(libs.kotlinx.coroutines.play.services)
 }

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myapplicationrestaurant.wear-mergeDebugResources-45:/values-v30/values-v30.xml",
+            "outputFile": "com.example.myapplicationrestaurant.wear-mergeDebugResources-46:/values-v30/values-v30.xml",
             "map": [
                 {
-                    "source": "/Users/juanfranciscomanzanogarcia/.gradle/caches/9.4.1/transforms/32268e0cd6a6d2c83fca365de5c38bff/transformed/material3-release/res/values-v30/values-v30.xml",
+                    "source": "/Users/juanfranciscomanzanogarcia/.gradle/caches/9.4.1/transforms/af9b6e6458785caa7bf875a9a84c25d4/transformed/material3-release/res/values-v30/values-v30.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
