@@ -27,9 +27,20 @@
     <string name="common_open_on_phone">ဖုန်းပေါ်မှာ ဖွင့်ပါ</string>
     <string name="common_signin_button_text">လက်မှတ်ထိုး ဝင်ရန်</string>
     <string name="common_signin_button_text_long">Google ဖြင့် လက်မှတ်ထိုးဝင်ရေ</string>
+    <string msgid="6412144553299494336" name="confirmation_overlay_a11y_description_fail">"မအောင်မြင်ပါ"</string>
+    <string msgid="8809042819843332546" name="confirmation_overlay_a11y_description_phone">"သင့်ဖုန်းတွင် ဖွင့်ထားသည်"</string>
+    <string msgid="2936753235333429892" name="confirmation_overlay_a11y_description_success">"အောင်မြင်ပါသည်"</string>
     <string msgid="8038256446254964252" name="default_error_message">"ထည့်သွင်းမှု မမှန်ကန်ပါ"</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"ပေါ့ပ်အပ် ဝင်းဒိုး"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"ဆွဲချမီနူး"</string>
+    <string name="horologist_split_toggle_chip_off_state_description">ပိတ်</string>
+    <string name="horologist_split_toggle_chip_on_state_description">ဖွင့်</string>
+    <string name="horologist_stepper_decrease_content_description">လျှော့ရန်</string>
+    <string name="horologist_stepper_increase_content_description">တိုးရန်</string>
+    <string name="horologist_toggle_button_off_state_description">ပိတ်</string>
+    <string name="horologist_toggle_button_on_state_description">ဖွင့်</string>
+    <string name="horologist_toggle_chip_off_state_description">ပိတ်</string>
+    <string name="horologist_toggle_chip_on_state_description">ဖွင့်</string>
     <string msgid="6827826412747255547" name="in_progress">"ဆောင်ရွက်နေဆဲ"</string>
     <string msgid="7933458017204019916" name="indeterminate">"တစ်ဝက်တစ်ပျက် စစ်ဆေးထားသည်"</string>
     <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"အောက်ခြေအပိုဆောင်း စာမျက်နှာကို ချုံ့သည်"</string>
@@ -103,4 +114,6 @@
     <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> ရာခိုင်နှုန်း။"</string>
     <string msgid="3765533235322692011" name="tooltip_description">"အကြံပြုချက်ပြ ပေါ့အပ် ဝင်းဒိုး"</string>
     <string msgid="3124740595719787496" name="tooltip_label">"အကြံပြုချက်ပြ ပေါ့အပ်ဝင်းဒိုး ပြရန်"</string>
+    <string msgid="8863821639144537553" name="ws_action_drawer_content_description">"လုပ်ဆောင်ချက် အံဆွဲ"</string>
+    <string msgid="777117228299084604" name="ws_navigation_drawer_content_description">"လမ်းကြောင်းပြ အံဆွဲ"</string>
 </resources>

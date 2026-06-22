@@ -27,9 +27,20 @@
     <string name="common_open_on_phone">باز کردن در تلفن</string>
     <string name="common_signin_button_text">ورود به سیستم</string>
     <string name="common_signin_button_text_long">‏ورود به سیستم با Google‎</string>
+    <string msgid="6412144553299494336" name="confirmation_overlay_a11y_description_fail">"ناموفق"</string>
+    <string msgid="8809042819843332546" name="confirmation_overlay_a11y_description_phone">"در تلفنتان باز شد"</string>
+    <string msgid="2936753235333429892" name="confirmation_overlay_a11y_description_success">"موفق"</string>
     <string msgid="8038256446254964252" name="default_error_message">"ورودی نامعتبر"</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"پنجره بالاپر"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"منوی کرکره‌ای"</string>
+    <string name="horologist_split_toggle_chip_off_state_description">خاموش</string>
+    <string name="horologist_split_toggle_chip_on_state_description">روشن</string>
+    <string name="horologist_stepper_decrease_content_description">کاهش دادن</string>
+    <string name="horologist_stepper_increase_content_description">افزایش دادن</string>
+    <string name="horologist_toggle_button_off_state_description">خاموش</string>
+    <string name="horologist_toggle_button_on_state_description">روشن</string>
+    <string name="horologist_toggle_chip_off_state_description">خاموش</string>
+    <string name="horologist_toggle_chip_on_state_description">روشن</string>
     <string msgid="6827826412747255547" name="in_progress">"درحال انجام"</string>
     <string msgid="7933458017204019916" name="indeterminate">"برخی موارد علامت‌گذاری شده است"</string>
     <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"جمع کردن برگ زیرین"</string>
@@ -103,4 +114,6 @@
     <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> درصد."</string>
     <string msgid="3765533235322692011" name="tooltip_description">"نکته‌ابزار"</string>
     <string msgid="3124740595719787496" name="tooltip_label">"نمایش نکته‌ابزار"</string>
+    <string msgid="8863821639144537553" name="ws_action_drawer_content_description">"کشوی فعالیت"</string>
+    <string msgid="777117228299084604" name="ws_navigation_drawer_content_description">"کشوی پیمایش"</string>
 </resources>

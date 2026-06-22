@@ -27,9 +27,20 @@
     <string name="common_open_on_phone">在手机上打开</string>
     <string name="common_signin_button_text">登录</string>
     <string name="common_signin_button_text_long">使用 Google 账号登录</string>
+    <string msgid="6412144553299494336" name="confirmation_overlay_a11y_description_fail">"失败"</string>
+    <string msgid="8809042819843332546" name="confirmation_overlay_a11y_description_phone">"已在您的手机上打开"</string>
+    <string msgid="2936753235333429892" name="confirmation_overlay_a11y_description_success">"成功"</string>
     <string msgid="8038256446254964252" name="default_error_message">"输入无效"</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"弹出式窗口"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"下拉菜单"</string>
+    <string name="horologist_split_toggle_chip_off_state_description">已关闭</string>
+    <string name="horologist_split_toggle_chip_on_state_description">已开启</string>
+    <string name="horologist_stepper_decrease_content_description">减少</string>
+    <string name="horologist_stepper_increase_content_description">增加</string>
+    <string name="horologist_toggle_button_off_state_description">已关闭</string>
+    <string name="horologist_toggle_button_on_state_description">已开启</string>
+    <string name="horologist_toggle_chip_off_state_description">已关闭</string>
+    <string name="horologist_toggle_chip_on_state_description">已开启</string>
     <string msgid="6827826412747255547" name="in_progress">"进行中"</string>
     <string msgid="7933458017204019916" name="indeterminate">"部分选中"</string>
     <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"收起底部动作条"</string>
@@ -103,4 +114,6 @@
     <string msgid="5946805113151406391" name="template_percent">"百分之 <ns1:g id="PERCENTAGE">%1$d</ns1:g>。"</string>
     <string msgid="3765533235322692011" name="tooltip_description">"提示"</string>
     <string msgid="3124740595719787496" name="tooltip_label">"显示提示"</string>
+    <string msgid="8863821639144537553" name="ws_action_drawer_content_description">"操作抽屉式导航栏"</string>
+    <string msgid="777117228299084604" name="ws_navigation_drawer_content_description">"抽屉式导航栏"</string>
 </resources>

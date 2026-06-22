@@ -1,13 +1,17 @@
 package com.example.myapplicationrestaurant.ui.viewmodel
 
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.*
-import com.example.myapplicationrestaurant.data.SmartHealthRepository
+import com.example.myapplicationrestaurant.shared.data.SmartHealthRepository
 import com.example.myapplicationrestaurant.data.models.SmartHealthData.MockData
 import com.example.myapplicationrestaurant.data.db.LecturaFC
+import com.example.myapplicationrestaurant.SmartHealthApp
 
-class DashboardViewModel : ViewModel() {
+class DashboardViewModel(application: Application) : AndroidViewModel(application) {
+    private val database = (application as SmartHealthApp).database
+
     // FC: viene del wearable real vía Repository.
     val fc: StateFlow<Int> = SmartHealthRepository.fcFlow
         .map { if (it == 0) MockData.fcActual else it }
@@ -26,10 +30,10 @@ class DashboardViewModel : ViewModel() {
         )
 
     // Historial desde Room
-    val historial: StateFlow<List<LecturaFC>> = SmartHealthRepository.getHistorial()
-        ?.stateIn(
+    val historial: StateFlow<List<LecturaFC>> = database.lecturaFCDao().getAll()
+        .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5_000),
             initialValue = emptyList()
-        ) ?: MutableStateFlow(emptyList())
+        )
 }

@@ -27,9 +27,20 @@
     <string name="common_open_on_phone">បើកតាមទូរស័ព្ទ</string>
     <string name="common_signin_button_text">ចូល</string>
     <string name="common_signin_button_text_long">ចូលដោយប្រើ Google</string>
+    <string msgid="6412144553299494336" name="confirmation_overlay_a11y_description_fail">"បរាជ័យ"</string>
+    <string msgid="8809042819843332546" name="confirmation_overlay_a11y_description_phone">"បានបើក​នៅលើ​ទូរសព្ទ​របស់អ្នក"</string>
+    <string msgid="2936753235333429892" name="confirmation_overlay_a11y_description_success">"ជោគជ័យ"</string>
     <string msgid="8038256446254964252" name="default_error_message">"ការបញ្ចូល​មិនត្រឹមត្រូវ"</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"វិនដូ​លោតឡើង"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"ម៉ឺនុយធ្លាក់ចុះ"</string>
+    <string name="horologist_split_toggle_chip_off_state_description">បិទ</string>
+    <string name="horologist_split_toggle_chip_on_state_description">បើក</string>
+    <string name="horologist_stepper_decrease_content_description">បន្ថយ</string>
+    <string name="horologist_stepper_increase_content_description">បង្កើន</string>
+    <string name="horologist_toggle_button_off_state_description">បិទ</string>
+    <string name="horologist_toggle_button_on_state_description">បើក</string>
+    <string name="horologist_toggle_chip_off_state_description">បិទ</string>
+    <string name="horologist_toggle_chip_on_state_description">បើក</string>
     <string msgid="6827826412747255547" name="in_progress">"កំពុងដំណើរការ"</string>
     <string msgid="7933458017204019916" name="indeterminate">"បានធីកខ្លះ"</string>
     <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"បង្រួម​សន្លឹកខាងក្រោម"</string>
@@ -103,4 +114,6 @@
     <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> ភាគរយ។"</string>
     <string msgid="3765533235322692011" name="tooltip_description">"កំណត់​ពន្យល់"</string>
     <string msgid="3124740595719787496" name="tooltip_label">"បង្ហាញ​កំណត់​ពន្យល់"</string>
+    <string msgid="8863821639144537553" name="ws_action_drawer_content_description">"ថត​សកម្មភាព"</string>
+    <string msgid="777117228299084604" name="ws_navigation_drawer_content_description">"ថត​រុករក"</string>
 </resources>

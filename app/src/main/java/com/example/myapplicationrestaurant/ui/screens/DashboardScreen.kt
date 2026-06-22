@@ -21,7 +21,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.myapplicationrestaurant.FilaHistorial
 import com.example.myapplicationrestaurant.ui.components.TarjetaDato
 import com.example.myapplicationrestaurant.ui.viewmodel.DashboardViewModel
-import com.example.myapplicationrestaurant.data.SmartHealthRepository
+import com.example.myapplicationrestaurant.shared.data.SmartHealthRepository
 import com.example.myapplicationrestaurant.BuildConfig
 import com.example.myapplicationrestaurant.ui.theme.SmartHealthMonitorTheme
 import kotlinx.coroutines.launch

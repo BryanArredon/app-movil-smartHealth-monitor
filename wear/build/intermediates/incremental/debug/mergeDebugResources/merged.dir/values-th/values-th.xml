@@ -27,9 +27,20 @@
     <string name="common_open_on_phone">เปิดบนโทรศัพท์</string>
     <string name="common_signin_button_text">ลงชื่อเข้าใช้</string>
     <string name="common_signin_button_text_long">ลงชื่อเข้าใช้ด้วย Google</string>
+    <string msgid="6412144553299494336" name="confirmation_overlay_a11y_description_fail">"ไม่สำเร็จ"</string>
+    <string msgid="8809042819843332546" name="confirmation_overlay_a11y_description_phone">"เปิดในโทรศัพท์ของคุณแล้ว"</string>
+    <string msgid="2936753235333429892" name="confirmation_overlay_a11y_description_success">"สำเร็จ"</string>
     <string msgid="8038256446254964252" name="default_error_message">"อินพุตไม่ถูกต้อง"</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"หน้าต่างป๊อปอัป"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"เมนูแบบเลื่อนลง"</string>
+    <string name="horologist_split_toggle_chip_off_state_description">ปิด</string>
+    <string name="horologist_split_toggle_chip_on_state_description">เปิด</string>
+    <string name="horologist_stepper_decrease_content_description">ลด</string>
+    <string name="horologist_stepper_increase_content_description">เพิ่ม</string>
+    <string name="horologist_toggle_button_off_state_description">ปิด</string>
+    <string name="horologist_toggle_button_on_state_description">เปิด</string>
+    <string name="horologist_toggle_chip_off_state_description">ปิด</string>
+    <string name="horologist_toggle_chip_on_state_description">เปิด</string>
     <string msgid="6827826412747255547" name="in_progress">"กำลังดำเนินการ"</string>
     <string msgid="7933458017204019916" name="indeterminate">"เลือกบางส่วน"</string>
     <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"ยุบ Bottom Sheet"</string>
@@ -103,4 +114,6 @@
     <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> เปอร์เซ็นต์"</string>
     <string msgid="3765533235322692011" name="tooltip_description">"เคล็ดลับเครื่องมือ"</string>
     <string msgid="3124740595719787496" name="tooltip_label">"แสดงเคล็ดลับเครื่องมือ"</string>
+    <string msgid="8863821639144537553" name="ws_action_drawer_content_description">"ลิ้นชักการดำเนินการ"</string>
+    <string msgid="777117228299084604" name="ws_navigation_drawer_content_description">"ลิ้นชักการนำทาง"</string>
 </resources>

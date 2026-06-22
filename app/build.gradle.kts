@@ -56,6 +56,7 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.play.services.wearable)
     implementation(libs.kotlinx.coroutines.play.services)
+    implementation(project(":shared"))
 
     // Room
     implementation(libs.androidx.room.runtime)

@@ -52,10 +52,20 @@
             </intent-filter>
         </service>
 
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="false" />
+        <uses-library
+            android:name="wear-sdk"
+            android:required="false" />
+
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
+            android:exported="true" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

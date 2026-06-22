@@ -27,9 +27,20 @@
     <string name="common_open_on_phone">Öppna på mobilen</string>
     <string name="common_signin_button_text">Logga in</string>
     <string name="common_signin_button_text_long">Logga in med Google</string>
+    <string msgid="6412144553299494336" name="confirmation_overlay_a11y_description_fail">"Fel"</string>
+    <string msgid="8809042819843332546" name="confirmation_overlay_a11y_description_phone">"Öppnades på telefonen"</string>
+    <string msgid="2936753235333429892" name="confirmation_overlay_a11y_description_success">"Klart"</string>
     <string msgid="8038256446254964252" name="default_error_message">"Ogiltiga indata"</string>
     <string msgid="6312721426453364202" name="default_popup_window_title">"Popup-fönster"</string>
     <string msgid="1890207353314751437" name="dropdown_menu">"Rullgardinsmeny"</string>
+    <string name="horologist_split_toggle_chip_off_state_description">Av</string>
+    <string name="horologist_split_toggle_chip_on_state_description">På</string>
+    <string name="horologist_stepper_decrease_content_description">Minska</string>
+    <string name="horologist_stepper_increase_content_description">Öka</string>
+    <string name="horologist_toggle_button_off_state_description">Av</string>
+    <string name="horologist_toggle_button_on_state_description">På</string>
+    <string name="horologist_toggle_chip_off_state_description">Av</string>
+    <string name="horologist_toggle_chip_on_state_description">På</string>
     <string msgid="6827826412747255547" name="in_progress">"Pågår"</string>
     <string msgid="7933458017204019916" name="indeterminate">"Delvis markerad"</string>
     <string msgid="2988463736136100848" name="m3c_bottom_sheet_collapse_description">"Komprimera arket på nedre delen av skärmen"</string>
@@ -103,4 +114,6 @@
     <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> procent."</string>
     <string msgid="3765533235322692011" name="tooltip_description">"beskrivning"</string>
     <string msgid="3124740595719787496" name="tooltip_label">"visa beskrivning"</string>
+    <string msgid="8863821639144537553" name="ws_action_drawer_content_description">"Åtgärdspanel"</string>
+    <string msgid="777117228299084604" name="ws_navigation_drawer_content_description">"Navigeringspanel"</string>
 </resources>
