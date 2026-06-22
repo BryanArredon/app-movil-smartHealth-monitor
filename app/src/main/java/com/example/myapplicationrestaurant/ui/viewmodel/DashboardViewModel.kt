@@ -5,10 +5,10 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.*
 import com.example.myapplicationrestaurant.data.SmartHealthRepository
 import com.example.myapplicationrestaurant.data.models.SmartHealthData.MockData
+import com.example.myapplicationrestaurant.data.db.LecturaFC
 
 class DashboardViewModel : ViewModel() {
     // FC: viene del wearable real vía Repository.
-    // Si es 0 (sin dato aún), usar valor simulado.
     val fc: StateFlow<Int> = SmartHealthRepository.fcFlow
         .map { if (it == 0) MockData.fcActual else it }
         .stateIn(
@@ -25,5 +25,11 @@ class DashboardViewModel : ViewModel() {
             initialValue = MockData.pasosActual
         )
 
-    val historial = MockData.historialFC // TODO S7: Room
+    // Historial desde Room
+    val historial: StateFlow<List<LecturaFC>> = SmartHealthRepository.getHistorial()
+        ?.stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5_000),
+            initialValue = emptyList()
+        ) ?: MutableStateFlow(emptyList())
 }

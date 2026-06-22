@@ -24,3 +24,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "My Application restautant"
 include(":app")
+include(":wear")

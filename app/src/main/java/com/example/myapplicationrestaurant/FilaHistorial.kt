@@ -1,7 +1,7 @@
 package com.example.myapplicationrestaurant
 
 import androidx.compose.runtime.Composable
-import com.example.myapplicationrestaurant.data.models.SmartHealthData.LecturaFC
+import com.example.myapplicationrestaurant.data.db.LecturaFC
 import androidx.compose.ui.Modifier
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth

@@ -15,7 +15,7 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import com.example.myapplicationrestaurant.data.models.SmartHealthData
+import com.example.myapplicationrestaurant.data.db.LecturaFC
 import com.example.myapplicationrestaurant.ui.theme.SmartHealthMonitorTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -46,7 +46,7 @@ fun DashboardScreen(
     // collectAsState() convierte StateFlow en State de Compose
     val fc by viewModel.fc.collectAsState()
     val pasos by viewModel.pasos.collectAsState()
-    val historial = viewModel.historial
+    val historial by viewModel.historial.collectAsState()
 
     SmartHealthMonitorTheme {
         Scaffold(

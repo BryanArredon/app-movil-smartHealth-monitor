@@ -8,64 +8,50 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.myapplicationrestaurant.ui.theme.SmartHealthMonitorTheme
 import com.example.myapplicationrestaurant.ui.screens.DashboardScreen
+import com.example.myapplicationrestaurant.ui.screens.HistorialScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             SmartHealthMonitorTheme {
-                var showLogin by remember { mutableStateOf(true) }
+                val navController = rememberNavController()
 
                 Surface(modifier = Modifier.fillMaxSize()) {
-                    if (showLogin) {
-                        LoginScreen(
-                            onLoginSuccess = {
-                                showLogin = false
-                                Log.d("SmartHealth", "Login exitoso")
-                            }
-                        )
-                    } else {
-                        DashboardScreen(
-                            onHistorialClick = { /* Navegar a historial */ },
-                            onAlertClick = { /* Enviar alerta */ }
-                        )
+                    NavHost(navController = navController, startDestination = "login") {
+                        composable("login") {
+                            LoginScreen(
+                                onLoginSuccess = {
+                                    navController.navigate("dashboard") {
+                                        popUpTo("login") { inclusive = true }
+                                    }
+                                    Log.d("SmartHealth", "Login exitoso")
+                                }
+                            )
+                        }
+                        composable("dashboard") {
+                            val configuration = LocalConfiguration.current
+                            val isLandscape = configuration.orientation == android.content.res.Configuration.ORIENTATION_LANDSCAPE
+                            
+                            DashboardScreen(
+                                onHistorialClick = { navController.navigate("historial") },
+                                onAlertClick = { /* Enviar alerta */ }
+                            )
+                        }
+                        composable("historial") {
+                            HistorialScreen(
+                                onBackClick = { navController.popBackStack() }
+                            )
+                        }
                     }
                 }
             }
-        }
-    }
-}
-
-@Preview(name = "Login - Light", showBackground = true,
-    showSystemUi = true, device = "spec:width=411dp,height=891dp")
-@Preview(name = "Login - Dark", showBackground = true,
-    uiMode = android.content.res.Configuration.UI_MODE_NIGHT_YES)
-@Preview(name = "Login - Big Font", showBackground = true,
-    fontScale = 1.5f)
-@Composable
-private fun LoginScreenPreview() {
-    SmartHealthMonitorTheme {
-        LoginScreen()
-    }
-}
-
-@Preview(showBackground = true, name = "Theme - Light")
-@Preview(showBackground = true, name = "Theme - Dark",
-    uiMode = android.content.res.Configuration.UI_MODE_NIGHT_YES)
-@Composable
-fun ThemePreview() {
-    SmartHealthMonitorTheme {
-        Surface(modifier = Modifier.fillMaxSize()) {
-            Text(
-                text = "SmartHealth Monitor",
-                style = MaterialTheme.typography.headlineMedium,
-                color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.padding(24.dp)
-            )
         }
     }
 }
